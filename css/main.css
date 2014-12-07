@@ -1,0 +1,51 @@
+body {
+  background: url("../images/Letters.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  text-align: center;
+}
+
+p, span {
+  font-size: 20px;
+  color: #222222;
+}
+
+.form {
+  margin-left: 35%;
+}
+
+#myWord {
+  width: 47%;
+  height: 27px;
+  border-radius: 5px;
+}
+
+button {
+cursor: default;
+font: bold 11px Arial,sans-serif!important;
+border: 1px solid #dcdcdc;
+border-radius: 3px;
+height: 29px;
+min-width: 54px;
+color: #222222;
+}
+
+/*h3 {
+  text-align: center;
+}*/
+
+li {
+  list-style: none;
+}
+
+/*div#results {
+  text-align: center;
+  display: inline;
+}
+
+h5 {
+  display: inline-block;
+}*/
