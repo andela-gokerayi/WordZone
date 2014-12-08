@@ -22,7 +22,7 @@ $('button#myWordButton').click(function(event) {
 function displayResults(originalWord, reponse) {
   $('div#results').empty();
   $('input#myWord').val('');
-  $('h3#wordHeader').text('Results for: ' + originalWord);
+  $('h3#wordHeader').text('Results for : ' + originalWord);
   
   // http://api.jquery.com/jquery.each/
   $.each(reponse, function(partOfSpeech, wordList) {
@@ -32,26 +32,24 @@ function displayResults(originalWord, reponse) {
 
      // create a list of words based on type
     if (wordList.syn !== undefined) {
-      createList('synonyms', wordList.syn);
+      createList('Synonyms', wordList.syn);
     }
     if (wordList.ant !== undefined) {
-      createList('antonyms', wordList.ant);
+      createList('Antonyms', wordList.ant);
     }
     if (wordList.rel !== undefined) {
-      createList('related terms', wordList.rel);
+      createList('Related terms', wordList.rel);
     }
     if (wordList.sim !== undefined) {
-      createList('similar terms', wordList.sim);
+      createList('Similar terms', wordList.sim);
     }
   });
 }
-
-
 function createList(data, words) {
   $('div#results').append('<h5>' + data + '</h5>');
   $('div#results').append('<ul id="' + data + '"></ul>');
   
-  words.forEach(function(el, i, arr) {
-    $('ul#' + data).append('<li>' + el + '</li>');
+  words.forEach(function(data2) {
+    $('ul#' + data).append('<li>' + data2 + ',</li>');
   });
 }
