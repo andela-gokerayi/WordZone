@@ -1,8 +1,11 @@
-
+var $searchButton = $('button#myWordButton');
+var $searchField = $('input#myWord');
 // add a click listener for the button
-$('button#myWordButton').click(function(event) {
+$searchButton.click(function(event) {
   event.preventDefault();
-  word = $('input#myWord').val();
+  $searchField.prop("disabled",true);
+  $searchButton.attr("disabled",true).text("Searching....");
+  word = $searchField.val();
   if (word.length > 0) {
     $.ajax({
       type: 'GET',
@@ -17,11 +20,10 @@ $('button#myWordButton').click(function(event) {
   }
 });
 
-
 // process JSON and add the results to the page
 function displayResults(originalWord, reponse) {
   $('div#results').empty();
-  $('input#myWord').val('');
+  $('input#myWord').text('');
   $('h3#wordHeader').text('Results for : ' + originalWord);
   
   // http://api.jquery.com/jquery.each/
@@ -44,7 +46,9 @@ function displayResults(originalWord, reponse) {
       createList('Similar terms', wordList.sim);
     }
   });
-}
+  $searchField.prop("disabled",false);
+  $searchButton.attr("disabled",false).text("Search");
+};
 function createList(data, words) {
   $('div#results').append('<h5>' + data + '</h5>');
   $('div#results').append('<ul id="' + data + '"></ul>');

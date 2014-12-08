@@ -1,3 +1,7 @@
+/********************
+      BODY
+********************/
+
 body {
   background: url("../images/Letters.jpg");
   margin-top: -1px;
@@ -5,15 +9,26 @@ body {
   background-size: cover;
 }
 
+/********************
+      HEADER
+********************/
 header {
   text-align: left;
-  background-color: #ccc;
+  background-color: #d9d9d9;
   margin: 0 -7px;
 }
+
+/********************
+      LOGO
+********************/
 
 img {
 margin-top: -8px;
 }
+
+/********************
+      INSTRUCTION
+********************/
 
 p, span {
   font-size: 15px;
@@ -25,6 +40,10 @@ p, span {
   font-family: cursive;
   color: #88AC04;
 }
+
+/********************
+      CONTAINER
+********************/
 
 .form {
   margin-left: 35%;
@@ -47,6 +66,10 @@ height: 29px;
 min-width: 54px;
 }
 
+/********************
+      RESULTS
+********************/
+
 h3#wordHeader {
 text-align: center;
 text-transform: capitalize;
@@ -57,12 +80,15 @@ text-transform: capitalize;
   font-family: cursive;
 }
 
-#Synonyms {
-}
-
 h4 {
 font-size: 20px;
 text-transform: capitalize;
+
+}
+
+#Synonyms, #Antonyms {
+  font-size: 15px;
+  font-weight: 400;
 }
 
 li {
