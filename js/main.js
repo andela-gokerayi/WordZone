@@ -56,4 +56,4 @@ function createList(data, words) {
   words.forEach(function(data2) {
     $('ul#' + data).append('<li>' + data2 + ',</li>');
   });
-}
+};
